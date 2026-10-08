@@ -1,0 +1,42 @@
+Atelier 3 : Couche Repository Spring Data JPA et Services CRUD complets
+
+## Modifications principales
+
+### Repositories (9)
+- Migration de CrudRepository vers JpaRepository pour toutes les entités
+- Support complet CRUD + pagination + tri
+- Repositories : Agence, Client, Contrat, Employe, Equipement, Maintenance, Paiement, Reservation, Vehicule
+
+### Services (18 fichiers)
+- 9 interfaces de service (I*Service)
+- 9 implémentations de service (*ServiceImpl)
+- CRUD complet implémenté pour toutes les entités
+- Focus détaillé sur Client et Vehicule
+
+### Corrections
+- Suppression de la dépendance circulaire dans pom.xml
+- Ajout de spring-boot-starter-test
+
+### Documentation
+- docs/repository-notes.md : Documentation complète des repositories et choix techniques
+- ATELIER3_RESUME.md : Résumé des modifications
+- README_SERVICES.md : Guide d'utilisation des services
+
+## Entités avec CRUD complet détaillé
+- Client (ClientServiceImpl) ⭐
+- Vehicule (VehiculeServiceImpl) ⭐
+
+## Vérification
+✅ Compilation Maven réussie (42 fichiers compilés)
+✅ Aucune erreur de diagnostic
+✅ Respect des conventions de nommage (préfixe I pour interfaces)
+✅ Injection par constructeur avec Lombok @AllArgsConstructor
+✅ Gestion des erreurs avec Optional.orElseThrow()
+
+## Conformité Atelier 3
+✅ Tous les repositories utilisent JpaRepository<Entité, Long>
+✅ 9 interfaces de service créées
+✅ 9 classes de service implémentées
+✅ CRUD complet pour 2 entités (Client et Vehicule)
+✅ Documentation repository-notes.md complétée
+✅ Application compile et démarre sans erreur
